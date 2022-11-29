@@ -13,10 +13,12 @@
         <Button x:Name="btn_Fill" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Заполнить автоматически" Padding="7"
                 BorderBrush="{x:Null}" Background="White" Margin="0, 90, 0, 0" Click="btn_Fill_Click"></Button>
 
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 140">Найти строки следующего вида: по краям стоят буквы 'a' и 'b',
-            а между ними - не буква и не цифра</TextBlock>
-        <Button x:Name="btn_Find" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Найти" Padding="7"
-                BorderBrush="{x:Null}" Background="White" Margin="0, 65, 0, 120" Click="btn_Find_Click"></Button>
+        <RadioButton x:Name="rb1" IsChecked="True" GroupName="rbs" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 70">по краям стоят буквы 'a' и 'b'
+            а между ними - не буква и не цифра</RadioButton>
+        <RadioButton x:Name="rb2" GroupName="rbs" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 30">по краям 
+стоят буквы 'a', а между ними - буква от a до g</RadioButton>
+        <Button x:Name="btn_Find" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Найти строки вида" Padding="7"
+                BorderBrush="{x:Null}" Background="White" Margin="0, 65, 0, 190" Click="btn_Find_Click"></Button>
 
         <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 40, 0, 0">Результат</Label>
         <ListBox x:Name="result" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 20" Width="50" Height="150"></ListBox>

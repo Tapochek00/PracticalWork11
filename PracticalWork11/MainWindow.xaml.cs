@@ -33,9 +33,12 @@ namespace PracticalWork11
 
         private void btn_Find_Click(object sender, RoutedEventArgs e)
         {
+            
             result.Items.Clear();
             string s = str.Text;
-            Regex regex = new Regex("a[^0-9a-zA-Z]b");
+            Regex regex;
+            if (rb1.IsChecked == true) regex = new Regex("a[^0-9a-zA-Z]b");
+            else regex = new Regex("a[a-g]a");
             MatchCollection matches = regex.Matches(s);
             if (matches.Count > 0)
             {
